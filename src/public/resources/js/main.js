@@ -30,6 +30,8 @@ function addItem (value) {
   addItemToDOM(value);
   document.getElementById('item').value = '';
 
+  sendItemToAPI(value);
+
   data.todo.push(value);
   dataObjectUpdated();
 }
@@ -119,4 +121,9 @@ function addItemToDOM(text, completed) {
   item.appendChild(buttons);
 
   list.insertBefore(item, list.childNodes[0]);
+}
+
+// Method for send to api
+function sendItemToAPI(item){
+  console.log(item);
 }
